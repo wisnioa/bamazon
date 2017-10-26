@@ -31,7 +31,11 @@ connection.connect(function(err) {
 
 
       function readProducts() {
-        console.log("Selecting all products...\n");
+        console.log("");
+        console.log("");
+        console.log("");
+        console.log("Welcome to Bamazon!");
+        console.log("Showing all our current products...\n");
         connection.query("SELECT * FROM products", function(error, response) {
          var table = new Table({
                 head: ['Item ID', 'Product Name', 'Department', 'Price', 'Stock Quantity'].map(function(header)
@@ -49,7 +53,9 @@ connection.connect(function(err) {
                 }
                 
         console.log(table.toString());
-      
+        console.log("");
+        console.log("");
+        console.log("");
   userPurchase();
   });
 }
@@ -75,14 +81,18 @@ inquirer
         	if (error) throw error;
 
         	if (response.length === 0) {
-        		console.log("INVALID ID");
-        		readProducts();
+        		console.log("Invalid item number");
+            readProducts();
+          if (response.length === NaN){
+            console.log("Please select a valid item number");
+            readProducts();
+          }
         	} else {
         		var productData = response[0];
 
         		if (quantity <= productData.stock_quantity) {
         			console.log("Your item is in stock. Your order has been placed!");
-
+              
         			connection.query("UPDATE products SET stock_quantity = " + (productData.stock_quantity - quantity) + " WHERE item_id = " + item, function(error, response) {
         				if (error) throw error;
 
