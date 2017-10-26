@@ -2,4 +2,4 @@
 
 
 
-<img>"Bamazon.gif" alt="Bamazon demo"</img>
+![Demo] ("Bamazon.gif")
