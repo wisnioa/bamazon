@@ -1,7 +1,7 @@
 
 
 
-<h1>Bamazon App<h1>
+<h1>Bamazon App</h1>
 
 
 <p>The purpose of this app was to create an Amazon-like storefront using Node.js and MySQL.</p>
