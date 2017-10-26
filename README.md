@@ -4,7 +4,7 @@
 <h1>Bamazon App</h1>
 
 
-<p>The purpose of this app was to create an Amazon-like storefront using Node.js and MySQL.</p>
+<p>The purpose of this app was to create an Amazon-like storefront using MySQL, Prompt, Colors, JavaScript and Node.js.</p>
 
 <img src="Bamazon.gif" alt="Demo"/>
 
